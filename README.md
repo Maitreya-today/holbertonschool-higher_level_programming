@@ -1,2 +1,1 @@
-# holbertonschool-higher_level_programming
-Python - Hello, World
+# PYTHON - HELLO, WORLD :wave::earth_asia:
