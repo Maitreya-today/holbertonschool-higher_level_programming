@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """0-rectangle.py"""
+
+
 class Rectangle:
     """Defines a rectangle"""
     def __init__(self, width=0, height=0):
