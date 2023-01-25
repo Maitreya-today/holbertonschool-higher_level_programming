@@ -4,9 +4,11 @@
 
 def matrix_divided(matrix, div):
     """Returns a new matrix that has been divided
+    
     Args:
         :matrix: a list of lists of ints or floats
         :div: number (int or float) to divide each element of matrix by
+    
     Raises:
         :raise TypeError: if matrix is not a list of lists of ints or floats
         :raise TypeError: if rows have have a different size than first row
