@@ -1,9 +1,55 @@
-#!/usr/bin/python3
-BaseGeometry = __import__('6-base_geometry').BaseGeometry
+Module 7-base_geometry
 
-bg = BaseGeometry()
+    >>> integer_validator = __import__('7-base_geometry').BaseGeometry.integer_validator
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-try:
-    print(bg.area())
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+WORKS with valid data type and integer value:
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("width", 10)
+    >>> print(BG.value)
+    10
+
+Must receive integer value
+Note: raises TypeError
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("width", "thicc")
+    Traceback (most recent call last):
+    TypeError: width must be an integer
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("age", 25.75)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+Width must be greater than zero
+Note: raises ValueError
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("width", -8)
+    Traceback (most recent call last):
+    ValueError: width must be greater than 0
+
+Does not work with zero arguments given
+Note: raises TypeError
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Does not work with one arguments given
+Note: raises TypeError
+
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("age")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Area method not implemented:
+
+    >>> BG = BaseGeometry()
+    >>> BG.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
