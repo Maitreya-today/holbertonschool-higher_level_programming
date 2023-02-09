@@ -1,1 +1,2 @@
-# PYTHON - HELLO, WORLD :wave::earth_asia:
+# Holbie Higher Level Newb
+## CURRENTLY - SQL genius
