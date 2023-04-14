@@ -11,4 +11,3 @@ fs.writeFile(filePath, content, { encoding: 'utf-8' }, (err) => {
     console.error(err);
   }
 });
-
